@@ -1,81 +1,104 @@
-.App {
-  font-family: Arial, sans-serif;
+body {
   margin: 0;
-  padding: 20px;
-  background-color: #f4f4f9;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.main-container {
+.container {
   display: flex;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-direction: column;
 }
 
-.left-panel {
-  width: 30%;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 2px solid #ddd;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.right-panel {
-  width: 70%;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.itinerary-container {
-  margin-top: 10px;
-}
-
-.vibe-section, .day-section, .recommendations-section, .summary-section {
-  margin-bottom: 20px;
-}
-
-.trip-details {
-  margin-top: 20px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.day-section ul, .recommendations-section ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.recommendation {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.recommendation a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.recommendation a:hover {
-  text-decoration: underline;
-}
-
-h2, h3, h4 {
+.header h1 {
+  font-size: 2rem;
   color: #333;
+  font-weight: bold;
 }
 
-p {
-  color: #555;
+.logo {
+  height: 40px;
+}
+
+.main-content {
+  display: flex;
+  min-height: 80vh;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: #e6f2ff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar h2 {
+  margin-bottom: 8px;
+  color: #004080;
+}
+
+.sidebar input,
+.sidebar select,
+.sidebar button {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.sidebar label {
+  font-weight: 500;
+  color: #333;
+  margin-top: 8px;
+}
+
+.sidebar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+.itinerary {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.itinerary h2 {
+  color: #004080;
+  margin-bottom: 16px;
+}
+
+.itinerary-text {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin-top: 10px;
+  color: #333;
+  line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.itinerary-text p {
+  margin: 0 0 10px;
 }

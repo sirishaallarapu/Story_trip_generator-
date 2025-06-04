@@ -1,13 +1,16 @@
-.trip-form-container {
-  background: #ffffff;
+.sidebar {
+  width: 280px;
+  background: #f3f4f6;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
-.form-title {
-  font-size: 1.8rem;
+.sidebar-title {
+  font-size: 1.5rem;
   font-weight: bold;
   color: #1e40af;
   margin-bottom: 15px;
@@ -15,8 +18,8 @@
 }
 
 .trip-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 

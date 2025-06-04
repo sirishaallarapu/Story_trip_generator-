@@ -1,21 +1,18 @@
 from pydantic import BaseModel
-from typing import List
+from typing import Optional
+from datetime import datetime
 
-class Budget(BaseModel):
-    accommodation: float
-    food: float
-    activities: float
-    transport: float
-
-class ItineraryDay(BaseModel):
-    day: int
+class TripRequest(BaseModel):
     destination: str
-    description: str
-    activities: List[str]
-    transport: str
-    tip: str
-    daily_budget: Budget
+    trip_type: str
+    duration: int
+    food_preference: str
+    num_members: int
+    budget: float
+    start_date: datetime
+    end_date: datetime
+    source: Optional[str] = None
 
-class ItineraryResponse(BaseModel):
-    itinerary: List[ItineraryDay]
-    text_itinerary: str
+class TripResponse(BaseModel):
+    itinerary: str
+    vibe: Optional[str] = None
